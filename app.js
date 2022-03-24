@@ -88,7 +88,7 @@ const gameBoard = () => {
             myArray[0] === 'X' && myArray[4] === 'X' && myArray[8] === 'X' ||
             myArray[6] === 'X' && myArray[4] === 'X' && myArray[2] === 'X') {
             
-            closing('X');
+            closing('Congragulations! X is the win!');
 
         } else if (myArray[0] === 'O' && myArray[1] === 'O' && myArray[2] === 'O' ||
         myArray[3] === 'O' && myArray[4] === 'O' && myArray[5] === 'O' ||
@@ -99,9 +99,13 @@ const gameBoard = () => {
         myArray[0] === 'O' && myArray[4] === 'O' && myArray[8] === 'O' ||
         myArray[6] === 'O' && myArray[4] === 'O' && myArray[2] === 'O') {
         
-        closing('O');
+        closing('Congragulations! O is the win!');
 
-    }
+        } else if (myArray[0] != '' && myArray[1] != '' && myArray[2] != '' &&
+        myArray[3] != '' && myArray[4] != '' && myArray[5] != '' &&
+        myArray[6] != '' && myArray[7] != '' && myArray[8] != '' ) {
+            closing('Game is a TIE');
+        }
     }
 
     const closing = (winner) => {
@@ -109,7 +113,7 @@ const gameBoard = () => {
         messageContainer.style.display = 'block';
         
         const message = document.querySelector('.message');
-        message.textContent = 'Congragulations! '+ winner +' is the win!';
+        message.textContent = winner;
 
         const closingButton = document.querySelector('#close-btn');
         closingButton.addEventListener('click', () => {location.reload();})
