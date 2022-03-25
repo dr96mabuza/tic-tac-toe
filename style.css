@@ -2,6 +2,11 @@
     margin: 0%;
     padding: 0%;
     font-size: 16px;
+    font-family: cursive;
+}
+
+body {
+    background-color: #efefef;
 }
 
 #container {
@@ -21,20 +26,30 @@
 .footer {
     bottom: 0;
     font-size: 0.6rem;
+    padding: 10px;
 }
 
 .header {
     top: 0;
-    font-size: 2rem;
+    font-size: 3rem;
+    background-color: white;
+    width: 100%;
+    padding: 20px;
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .main {
-    margin-top: 100px;
+    margin-top: 130px;
+    gap: 40px;
 }
 
 .game-container {
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
     border: 1px solid black;
     border-radius: 5px;
 
@@ -42,8 +57,10 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
 
-    gap: 5px;
+    gap: 3px;
     padding: 5px;
+    margin-bottom: 30px;
+    background-color: #a9a9a9;
 }
 
 .game-box {
@@ -55,6 +72,8 @@
     justify-content: center;
 
     font-size: 3rem;
+    background-color: #caebf2;
+    color: #ff3b3b;
 }
 
 /*Entry form*/
@@ -72,14 +91,25 @@
 }
 
 #form {
-    background-color: white;
+    background-color: #efefef;
     display: flex;
     flex-direction: column;
     width: 300px;
     
     margin: 15% auto;
     padding: 20px;
+    gap: 7px;
     border: 1px solid black;
+    border-radius: 12px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#close{
+    margin-left: auto;
+    color: #ff3b3b;
+    font-size: 1.2rem;
 }
 
 #close :hover {
@@ -101,15 +131,26 @@
 }
 
 #message{
-    background-color: white;
+    background-color: #efefef;
     display: flex;
     flex-direction: column;
     width: 300px;
     
     margin: 15% auto;
     padding: 20px;
+    gap: 15px;
     border: 1px solid black;
 
     align-items: center;
     justify-content: center;
+    border-radius: 12px;
+}
+
+button {
+    background-color: #ff3b3b;
+    color: #caebf2;
+    padding: 5px 10px;
+    border: 3px solid #a9a9a9;
+    border-radius: 15px;
+    font-size: 1.35rem;
 }

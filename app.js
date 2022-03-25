@@ -8,7 +8,7 @@ const gameBoard = () => {
             formDisplay.style.display = 'block';
         });
     
-        const radio = document.querySelector('input[type=radio]:checked');
+        let radio = document.querySelector('input[type=radio]:checked');
     
         const form = document.querySelector('#form'); //prevents page from reloading
         form.addEventListener('submit', function (event) {
